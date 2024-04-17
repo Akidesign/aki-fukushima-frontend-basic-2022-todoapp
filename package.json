@@ -1,0 +1,37 @@
+{
+  "name": "fb2022-todoapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/shinonome-inc/frontend-basic-2022-todoapp.git",
+  "author": "MoAI522",
+  "license": "MIT",
+  "scripts": {
+    "sb": "storybook dev -p 6006 -s ./src",
+    "dev": "webpack serve --open --mode development",
+    "build": "webpack --mode production",
+    "build-storybook": "storybook build -s ./src",
+    "chromatic": "npx chromatic --project-token=072222ef1ac3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-react": "^7.22.15",
+    "@storybook/addon-essentials": "^7.4.2",
+    "@storybook/react": "^7.4.2",
+    "@storybook/react-webpack5": "^7.4.2",
+    "babel-loader": "^8.2.2",
+    "chromatic": "^5.9.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "storybook": "^7.4.2",
+    "style-loader": "^3.2.1",
+    "styled-components": "^5.3.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
