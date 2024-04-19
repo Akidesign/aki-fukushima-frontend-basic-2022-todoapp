@@ -1,5 +1,5 @@
-import { Example } from "./index";
+import { Title } from "./index";
 
-export default { component: Example };
+export default { component: Title };
 
 export const Default = {};
