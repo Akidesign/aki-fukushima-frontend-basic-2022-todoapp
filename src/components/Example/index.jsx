@@ -1,5 +1,10 @@
+import styled from "styled-components";
 import React from "react";
 
 export const Title = () => {
-  return <div>SIMPLE TODO APP</div>;
+  return <StyledText>SIMPLE TODO APP</StyledText>;
 };
+
+const StyledText = styled.div`
+  color: white;
+`;
