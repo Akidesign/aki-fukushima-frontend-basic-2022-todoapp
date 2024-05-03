@@ -1,5 +1,9 @@
-import { Title } from "./index";
+import { EditButton } from "./index";
 
-export default { component: Title };
+export default { component: EditButton };
 
-export const Default = {};
+export const Default = {
+  args: {
+    onClick: () => console.log("clicked"),
+  },
+};
