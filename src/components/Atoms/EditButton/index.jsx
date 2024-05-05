@@ -6,7 +6,7 @@ import COLOR from "../../../variables/color";
 export const EditButton = ({ onClick }) => {
   return (
     <Button onClick={onClick}>
-      <img src={pencil} />
+      <pencilbutton src={pencil} />
     </Button>
   );
 };
@@ -26,7 +26,7 @@ const Button = styled.button`
   }
 `;
 
-const img = styled.img`
+const pencilbutton = styled.img`
   width: 20px;
   height: 20px;
 `;
