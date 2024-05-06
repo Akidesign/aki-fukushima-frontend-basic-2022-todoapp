@@ -1,5 +1,9 @@
-import { Title } from "./index";
+import { AddTaskButton } from "./index";
 
-export default { component: Title };
+export default { component: AddTaskButton };
 
-export const Default = {};
+export const Default = {
+    args: {
+        onclick: () => console.log("clicked"),
+    };
+};
