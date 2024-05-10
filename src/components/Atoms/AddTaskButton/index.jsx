@@ -39,6 +39,6 @@ const PlusButton = styled.img`
 const AddTaskText = styled.p`
   ${TEXT.S}
   color: ${COLOR.GREEN};
-  font-family: ${FONTFAMILY.NOTO_SANS_JP};
+  font-family: ${FONTFAMILY.NOTO_SANS};
   margin: 0;
 `;
