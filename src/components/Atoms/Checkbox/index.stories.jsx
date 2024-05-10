@@ -1,5 +1,5 @@
-import { Title } from "./index";
+import { Checkbox } from "./index";
 
-export default { component: Title };
+export default { component: Checkbox };
 
 export const Default = {};
