@@ -4,6 +4,6 @@ export default { component: AddTaskButton };
 
 export const Default = {
   args: {
-    onclick: () => console.log("clicked"),
+    onClick: () => console.log("clicked"),
   },
 };
