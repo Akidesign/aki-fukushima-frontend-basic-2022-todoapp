@@ -5,7 +5,7 @@ export default { component: Input };
 export const Default = {
   args: {
     onEditComplete: (value) => {
-      console.log("edit complete: + value");
+      console.log("edit complete:" + value);
     },
     defaultValue: "",
   },
