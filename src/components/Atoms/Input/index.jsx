@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
+import FONTFAMILY from "../../../variables/breakpoint";
 
 export const Input = ({ onEditComplete, defaultValue }) => {
-  //defaultValue=[State]text と input要素の初期値
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -14,13 +14,11 @@ export const Input = ({ onEditComplete, defaultValue }) => {
   const handleBlur = () => {
     onEditComplete(inputRef.current.value);
   };
-  //input要素からフォーカスが外れた時に編集完了処理を行う
 
   const handleKeyDown = (e) => {
     if (e.key !== "Enter") return;
     onEditComplete(inputRef.current.value);
   };
-  //Enter 入力→編集完了処理を行う
 
   return (
     <StyledInput
@@ -33,17 +31,13 @@ export const Input = ({ onEditComplete, defaultValue }) => {
 };
 
 const StyledInput = styled.div`
-  display: flex;
-  width: 232px;
   padding: 0px 4px;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: ${COLOR.COLOR_BLACk};
-`;
-
-const StyledText = styled.p`
+  border-radius: 2px;
+  gap: 10px;
+  font-family: ${FONTFAMILY.NOTO_SANS};
   font-weight: 500;
   margin: auto;
   line-height: 20px;
+  background-color: ${COLOR.BLACk};
   color: ${COLOR.LIGHT_GRAY} ${TEXT.S};
 `;
