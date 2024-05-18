@@ -28,7 +28,7 @@ const CheckButton = styled.img`
   height: 100%;
   flex: 1 0 0;
   align-self: stretch;
-  opacity: 0; /*opacity 0=非表示 1=表示*/
+  opacity: 0;
   :hover {
     opacity: 1;
   }
