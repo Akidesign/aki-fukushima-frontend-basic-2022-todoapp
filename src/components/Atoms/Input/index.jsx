@@ -29,11 +29,14 @@ export const Input = ({ onEditComplete, defaultValue }) => {
   );
 };
 
-const StyledInput = styled.div`
+const StyledInput = styled.input`
   padding: 0px 4px;
   border-radius: 2px;
   gap: 10px;
   line-height: 20px;
-  background-color: ${COLOR.BLACk};
+  width: 232px;
+  outline: none;
+  border: none;
+  background-color: ${COLOR.BLACK};
   color: ${COLOR.LIGHT_GRAY} ${TEXT.S};
 `;
