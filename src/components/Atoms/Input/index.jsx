@@ -16,7 +16,7 @@ export const Input = ({ onEditComplete, defaultValue }) => {
 
   const handleKeyDown = (e) => {
     if (e.key !== "Enter") return;
-    onEditComplete(inputRef.current.value);
+    e.target.blur();
   };
 
   return (
@@ -24,7 +24,7 @@ export const Input = ({ onEditComplete, defaultValue }) => {
       ref={inputRef}
       defaultValue={defaultValue}
       onBlur={handleBlur}
-      onkeyDown={handleKeyDown}
+      onKeyDown={handleKeyDown}
     />
   );
 };
@@ -32,11 +32,11 @@ export const Input = ({ onEditComplete, defaultValue }) => {
 const StyledInput = styled.input`
   padding: 0px 4px;
   border-radius: 2px;
-  gap: 10px;
   line-height: 20px;
   width: 100%;
   outline: none;
   border: none;
   background-color: ${COLOR.BLACK};
-  color: ${COLOR.LIGHT_GRAY} ${TEXT.S};
+  color: ${COLOR.WHITE};
+  ${TEXT.S}
 `;
