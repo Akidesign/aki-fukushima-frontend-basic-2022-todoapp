@@ -12,6 +12,6 @@ export const Default = {
       console.log("task changed:" + value);
     },
     taskName: "taskname",
-    defaultIsEditing: false,
+    defaultIsEditing: true,
   },
 };
