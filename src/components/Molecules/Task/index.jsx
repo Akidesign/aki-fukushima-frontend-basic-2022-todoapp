@@ -61,6 +61,7 @@ const StyledCheckboxContainer = styled.div`
 `;
 
 const StyledNameAndButtonContainer = styled.div`
+  width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -75,7 +76,6 @@ const StyledTaskName = styled.div`
 `;
 
 const StyledEditButtonContainer = styled.div`
-  width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 4px;
