@@ -58,3 +58,21 @@ return (
 );
 
 export default TodoCard;
+
+const StyledContainer = styled.div`
+  gap: 10px;
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: ${COLOR.LIGHT_BLACK};
+`
+
+const StyledTaskList = styled.div`
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  color: ${COLOR.LIGHT_GRAY};
+  ${TEXT.S}
+`
