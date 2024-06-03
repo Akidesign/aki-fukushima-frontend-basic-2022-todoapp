@@ -63,8 +63,9 @@ const StyledCheckboxContainer = styled.div`
 const StyledNameAndButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
+  overflow: hidden;
 `;
 
 const StyledTaskName = styled.div`
