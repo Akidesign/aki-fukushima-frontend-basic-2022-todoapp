@@ -73,6 +73,9 @@ const StyledTaskName = styled.div`
   font-family: ${FONT_FAMILY.NOTO_SANS};
   ${TEXT.S}
   margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const StyledEditButtonContainer = styled.div`
