@@ -73,7 +73,6 @@ const StyledTaskName = styled.div`
   font-family: ${FONT_FAMILY.NOTO_SANS};
   ${TEXT.S}
   margin-right: 10px;
-  flex: 1;
 `;
 
 const StyledEditButtonContainer = styled.div`
