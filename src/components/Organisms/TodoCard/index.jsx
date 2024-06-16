@@ -20,7 +20,7 @@ export const TodoCard = () => {
       onTaskComplete(editTargetIndex);
     } else {
       setTaskList(() => {
-        const newTaskList = [...(taskList || [])];
+        const newTaskList = [...taskList];
         newTaskList[editTargetIndex].name = value;
         newTaskList[editTargetIndex].initializing = false;
         return newTaskList;
