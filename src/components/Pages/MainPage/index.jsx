@@ -21,11 +21,11 @@ const StyledMainPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 60px 20px 20px;
   gap: 20px;
 
   @media (min-width: ${BREAKPOINT.MEDIUM}) {
-    padding: 20px;
+    padding-top: 60px;
   }
 `;
 
@@ -33,5 +33,5 @@ const StyledTodoCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  width: 500px;
+  max-width: 500px;
 `;
