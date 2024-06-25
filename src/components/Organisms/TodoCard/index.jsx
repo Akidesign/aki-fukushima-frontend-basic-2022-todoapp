@@ -47,7 +47,6 @@ export const TodoCard = () => {
 };
 
 const StyledContainer = styled.div`
-  gap: 10px;
   display: flex;
   padding: 20px;
   align-items: flex-start;
