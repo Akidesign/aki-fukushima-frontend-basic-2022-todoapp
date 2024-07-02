@@ -60,4 +60,8 @@ const StyledTaskList = styled.div`
   align-self: stretch;
   flex-direction: column;
   color: ${COLOR.LIGHT_GRAY};
+
+  & > * {
+    margin-top: 10px;
+  }
 `;
