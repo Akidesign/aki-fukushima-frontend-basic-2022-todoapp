@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index";
 import { Task } from "../../Molecules/Task/index";
 import styled from "styled-components";
@@ -27,6 +27,19 @@ export const TodoCard = () => {
       });
     }
   };
+
+  // ローカルストレージからタスクを読み込む
+  useEffect(() => {
+    const res = localStorage.getItem("tasks");
+    if (res !== null) {
+      setTaskList(JSON.parse(res));
+    }
+  }, []);
+
+  // タスクリストが変更されたらローカルストレージに保存する
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(taskList));
+  }, [taskList]);
 
   return (
     <StyledContainer>
