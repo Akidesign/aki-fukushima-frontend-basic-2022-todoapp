@@ -15,7 +15,7 @@ export const AlertHandlerProvider = ({ children }) => {
     });
     setTimeout(() => {
       closeAlert(); // 自動でアラートを閉じる
-    }, 3000); // 3秒後に閉じる
+    }, 5000); // 5秒後に閉じる
   };
 
   const closeAlert = () => {
