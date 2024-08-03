@@ -18,13 +18,13 @@ const AlertContainer = styled.div`
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  width: 100%;
   max-width: 360px;
   padding: 10px 20px;
   border-radius: 4px;
   background: ${COLOR.RED};
   transition: all 0.5s ease 0s;
-  transform: translate(-50%, 0);
+  transform: ${({ alertActive }) =>
+    alertActive ? "translate(-50%, 0)" : "translate(-50%, -100%)"};
   opacity: ${({ alertActive }) => (alertActive ? 1 : 0)};
   pointer-events: ${({ alertActive }) => (alertActive ? "auto" : "none")};
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
