@@ -13,12 +13,13 @@ export const Alert = ({ isActive, context }) => {
 };
 
 const AlertContainer = styled.div`
+  width: 100%;
   top: 80px;
   display: flex;
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  max-width: 360px;
+  max-width: 400px;
   padding: 10px 20px;
   border-radius: 4px;
   background: ${COLOR.RED};
@@ -29,6 +30,8 @@ const AlertContainer = styled.div`
   pointer-events: ${({ alertActive }) => (alertActive ? "auto" : "none")};
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
     transform: translate(-50%, 100%);
+    width: 100%;
+    max-width: 400px;
   }
 `;
 
