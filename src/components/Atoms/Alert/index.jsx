@@ -29,7 +29,8 @@ const AlertContainer = styled.div`
   opacity: ${({ alertActive }) => (alertActive ? 1 : 0)};
   pointer-events: ${({ alertActive }) => (alertActive ? "auto" : "none")};
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
-    transform: translate(-50%, 100%);
+    transform: ${({ alertActive }) =>
+      alertActive ? "translate(-50%, 0)" : "translate(-50%, -100%)"};
     width: 100%;
     max-width: 400px;
   }
