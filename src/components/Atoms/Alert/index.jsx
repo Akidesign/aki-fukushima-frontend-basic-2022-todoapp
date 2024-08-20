@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import FONTFAMILY from "../../../variables/font_family";
-import BREAKPOINT from "../../../variables/breakpoint"; // BREAKPOINTをインポート
+import BREAKPOINT from "../../../variables/breakpoint";
 
 export const Alert = ({ isActive, context }) => {
   return (
     <AlertContainer alertActive={isActive}>
-      <AlertContext>{context}</AlertContext>
+      <AlertText>{context}</AlertText>
     </AlertContainer>
   );
 };
@@ -36,7 +36,7 @@ const AlertContainer = styled.div`
   }
 `;
 
-const AlertContext = styled.div`
+const AlertText = styled.div`
   font-size: 14px;
   color: ${COLOR.WHITE};
   font-family: ${FONTFAMILY.NOTO_SANS};
