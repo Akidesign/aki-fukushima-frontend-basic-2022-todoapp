@@ -3,29 +3,38 @@ import { AddTaskButton } from "../../Atoms/AddTaskButton/index";
 import { Task } from "../../Molecules/Task/index";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler"; // アラートハンドラーのインポート
 
 export const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
 
+  const { setAlert } = useAlertHandlerContext(); // アラートコンテキストからsetAlertを取得
+
   const onAddTaskButtonClick = () => {
-    setTaskList([...taskList, { name: "", initializing: true }]);
+    const newTask = { name: "", initializing: true };
+
+    // 空のタスクが既に存在しない場合に新しいタスクを追加
+    setTaskList([...taskList, newTask]);
   };
 
   const onTaskComplete = (popTargetIndex) => {
+    // タスクを削除する
     setTaskList(taskList.filter((task, index) => index !== popTargetIndex));
   };
 
   const onTaskNameChange = (value, editTargetIndex) => {
-    if (value === "") {
-      onTaskComplete(editTargetIndex);
-    } else {
-      setTaskList(() => {
-        const newTaskList = [...taskList];
-        newTaskList[editTargetIndex].name = value;
-        newTaskList[editTargetIndex].initializing = false;
-        return newTaskList;
-      });
-    }
+    setTaskList(() => {
+      const newTaskList = [...taskList];
+
+      if (value === "") {
+        setAlert("タスクの名前が設定されていません。"); // 空のタスクに対するエラーメッセージ
+        return newTaskList.filter((task, index) => index !== editTargetIndex); // 空のタスクを削除
+      }
+
+      newTaskList[editTargetIndex].name = value;
+      newTaskList[editTargetIndex].initializing = false;
+      return newTaskList;
+    });
   };
 
   // ローカルストレージからタスクを読み込む
